@@ -3,10 +3,8 @@ import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
-from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI, HarmBlockThreshold, HarmCategory
 
-# load_dotenv()
 llm = None
 
 def get_llm_instance(api_key):
