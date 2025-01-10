@@ -1,2 +1,2 @@
-langchain_core
-langchain_google_genai
+langchain_core==0.2.24
+langchain_google_genai==1.0.5
