@@ -61,7 +61,7 @@ api_key = st.sidebar.text_input("Enter your Gemini API key", type="password")
 # Button to clear conversation and reset session state
 if st.sidebar.button("Clear Conversation"):
     st.session_state.messages = [
-        AIMessage(content="Hello, I am ILM-A! I am here to help you with your studies.")
+        AIMessage(content="Hello, I am ILM-A! Select a chapter and get started.")
     ]
 
 # File selection mechanism
@@ -87,7 +87,7 @@ if (selected_class != st.session_state.prev_class or
     selected_subject != st.session_state.prev_subject or
     selected_chapter != st.session_state.prev_chapter):
     st.session_state.messages = [
-        AIMessage(content="Hello, I am ILM-A! I am here to help you with your studies.")
+        AIMessage(content="Hello, I am ILM-A! Select a chapter and get started.")
     ]
     st.session_state.prev_class = selected_class
     st.session_state.prev_subject = selected_subject
@@ -113,7 +113,7 @@ system_prompt = f"""
 if "messages" not in st.session_state:
     # add greeting message to user
     st.session_state.messages = [
-        AIMessage(content="Hello, I am ILM-A! I am here to help you with your studies.")
+        AIMessage(content="Hello, I am ILM-A! Select a chapter and get started.")
     ]
 
 # if there are messages already in session, write them on app
